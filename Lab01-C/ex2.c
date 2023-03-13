@@ -12,7 +12,12 @@ return ma;
 
 int main(){
 
-float media = calculamedia(8.5,10,7.0, 10);
+float n1 = 8.5;
+float n2 = 10.0;
+float  n3 = 7.5;
+float ne = 10;
+printf("\n\nN1: %f \nN2: %f\nN3: %f\nNE: %f", n1,n2,n3,ne);
+float media = calculamedia(n1,n2,n3,ne);
 
 if(media >= 9 )printf("\n\nMedia : %f \n A\n\n", media);
 else{
