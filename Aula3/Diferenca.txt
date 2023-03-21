@@ -1,0 +1,3 @@
+https://github.com/GabrielOgun/Os-Crias-e-o-Augusto-Paralelos
+
+A diferença de velocidade depende de uma sequencia de fatores e , principalmente, do tamanho do vetor. No entanto rodando varias entradas, a diferença a olho nu é quase imperceptível , possivelmente na casa de ms, o que mostra o custo para o multiprocessamento desnecessario, uma vez que, o ganho é minimo para o aumento de recursos.
