@@ -20,6 +20,13 @@ int divisor;
 
 }multiplicador;
 
+
+void freematriz(int linha, int **matriz){
+   for(int i = 0; i< linha; i++)
+      free(matriz[i]);
+    
+  
+}
 void printmatriz(int linha, int coluna, int** matriz){
   for(int i = 0; i< linha; i++){
     printf("\n");
@@ -185,7 +192,15 @@ int main(void) {
   printmatriz(smatriz3.linha, smatriz3.coluna, smatriz3.matriz);
   
 
-    
+
+  freematriz(smatriz.linha, smatriz.matriz);
+  free(smatriz.matriz);
+  
+  freematriz(smatriz2.linha, smatriz2.matriz);
+  free(smatriz2.matriz);
+  
+  freematriz(smatriz3.linha, smatriz3.matriz);
+  free(smatriz3.matriz);
   
 
   printf("\n");
