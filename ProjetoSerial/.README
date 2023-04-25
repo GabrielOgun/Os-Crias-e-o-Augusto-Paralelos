@@ -1,0 +1,2 @@
+instalar biblioteca gmp --> sudo apt install libgmp-dev
+para compilar colocar o parametro -lgmp
