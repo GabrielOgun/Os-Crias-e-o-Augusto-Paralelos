@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 #define NUM_THREADS 2
-#define N 16050
+#define N 15500
 
 mpf_t my_result;
 mpf_t *fatorial;
