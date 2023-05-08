@@ -1,17 +1,15 @@
 #include <math.h>
 #include <stdio.h>
-#include <omp.h>
+
 
 double f(double x) {
     return exp(x);
 }
 
-double Trap(double a, double b, int n) {
+double Trap(double a, double b, int n, int thread_count, int my_rank) {
     double h = (b-a)/n;
     double local_a, local_b, my_result = 0.0;
     int i, local_n;
-    int my_rank = omp_get_thread_num();
-    int thread_count = omp_get_num_threads();
     local_n = n/thread_count;
     local_a = a + my_rank*local_n*h;
     local_b = local_a + local_n*h;
@@ -30,13 +28,13 @@ int main() {
     long double n = 10.0;
     long double global_result = 0.0;
     int thread_count = 2;
-
-    #pragma omp parallel num_threads(thread_count)
+    
+    
+    for(int i = 1; i<= thread_count; i++)
     {
        long  double my_result = 0.0;
-        my_result = Trap(a, b, n);
+        my_result = Trap(a, b, n, thread_count, i);
 
-        #pragma omp critical
         global_result += my_result;
     }
 
