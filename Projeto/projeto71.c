@@ -2,9 +2,9 @@
 #include <pthread.h>
 #include <gmp.h>
 #include <stdlib.h>
-// N = 20K  - 61K em 12s
+//alteraçoes de N e de prec 71k em 12min 
 #define NUM_THREADS 2
-#define N 15500
+#define N 100000
 
 mpf_t my_result;
 mpf_t *fatorial;
@@ -32,7 +32,7 @@ void *calcular_resultado(void *arg) {
 }
 
 int main(void) {
-    mpf_set_default_prec(205000);
+    mpf_set_default_prec(1000000);
     mpf_init_set_ui(my_result, 0);
     fatorial = (mpf_t *)malloc(sizeof(mpf_t) * (N+1));
 
