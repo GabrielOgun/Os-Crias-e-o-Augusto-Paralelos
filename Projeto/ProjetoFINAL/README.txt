@@ -8,3 +8,9 @@ Usamos >> arquivo.txt para armazenar a saida em um arquivo texto, visto que o co
 Comprovar Resultado: algoritmo que compara o resultado do programa  com os primeiros 2000000 de digitos encontrados pela NASA:
 Link da Nasa: https://apod.nasa.gov/htmltest/gifcity/e.2mil
 Link do Algoritmo: https://replit.com/join/gyfviztlze-arturvalladares --> basta colocar o numero obtido no formato string no arquivo sn.py
+
+Grupo:
+Artur Valladares Giacummo 32129221
+Augusto Esteves Carrera 32114842
+Gabriel Marques Gonçalves Almeida 32066724
+
